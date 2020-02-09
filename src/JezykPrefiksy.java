@@ -1,2 +1,2 @@
-public class JezykPrefiksy implements Jezyk {
+public class JezykPrefiksy implements IJezyk {
 }

@@ -1,2 +1,2 @@
-public class JezykWszystkieSegmenty implements Jezyk {
+public class JezykWszystkieSegmenty implements IJezyk {
 }
