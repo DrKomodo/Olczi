@@ -16,7 +16,9 @@ public abstract class Jezyk extends NazwanyObiekt implements IJezyk {
     }
 
     @Override
-    public void
+    public void uczSięZPliku(String nazwa) {
+
+    }
 
     protected void dodajInformacje(String prefiks, Character znak) {
         dane.putIfAbsent(prefiks, new HashMap<>());
