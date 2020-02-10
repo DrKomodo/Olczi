@@ -1,27 +1,16 @@
 import java.util.Map;
 
-public class JezykPrefiksy extends NazwanyObiekt implements IJezyk {
+public class JezykPrefiksy extends Jezyk {
     public JezykPrefiksy(String nazwa) {
         super(nazwa);
     }
 
     @Override
-    public Map<Character, Integer> częstości(String prefiks) {
-        return null;
-    }
-
-    @Override
-    public void uczSię(String słowo) {
-
-    }
-
-    @Override
-    public void uczSięZPliku(String nazwa) {
-
-    }
-
-    @Override
-    public String literyAlfabetu() {
-        return null;
+    public void uczSię(String slowo) {
+        char[] litery = slowo.toCharArray();
+        for (int koniec = 0; koniec < slowo.length(); koniec++) {
+            alfabet.add(litery[koniec]);
+            dodajInformacje(slowo.substring(0, koniec), litery[koniec]);
+        }
     }
 }

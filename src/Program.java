@@ -3,7 +3,7 @@ public class Program {
         System.out.print("==> Uczenie z pliku " + nazwaPliku + ", języka " + j.nazwa());
         j.uczSięzPliku(nazwaPliku);
 
-        Generator g = new Generator2(j);
+        IGenerator g = new Generator2(j);
         System.out.println(" i generatora = " + g.nazwa() +  ": ");
         for(int i = 0; i<10; i++){
             System.out.println(i + ": " + g.dajSłowo());

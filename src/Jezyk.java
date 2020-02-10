@@ -26,4 +26,14 @@ public abstract class Jezyk extends NazwanyObiekt implements IJezyk {
         int ile_razy = dane_prefiksu.getOrDefault(znak, 0);
         dane_prefiksu.put(znak, ile_razy + 1);
     }
+
+
+    @Override
+    public String literyAlfabetu() {
+        StringBuilder wynik = new StringBuilder();
+        for (Character litera: alfabet) {
+            wynik.append(litera);
+        }
+        return wynik.toString();
+    }
 }

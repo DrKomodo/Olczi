@@ -15,14 +15,4 @@ public class JezykOstatniaLitera extends Jezyk {
             prefiks = znak.toString();
         }
     }
-
-
-    @Override
-    public String literyAlfabetu() {
-        StringBuilder wynik = new StringBuilder();
-        for (Character litera: alfabet) {
-            wynik.append(litera);
-        }
-        return wynik.toString();
-    }
 }
