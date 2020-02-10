@@ -22,7 +22,7 @@ public abstract class Jezyk implements IJezyk {
         File plik = new File("nazwa_Pliku.txt");
 
         sk = new Scanner(new File("nazwa_Pliku.txt")).useDelimiter("[^" + literyAlfabetu() + literyAlfabetu().toUpperCase() + "]+")
-        
+
     }
 
     protected void dodajInformacje(String prefiks, Character znak) {
