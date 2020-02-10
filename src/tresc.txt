@@ -1,0 +1,110 @@
+Treść
+W naszym programie mają występować obiekty, które opisują język (naturalny, np. polski).
+ Opis języka ma sprowadzać się do informacji ile razy w języku po zadanym prefiksie pojawia
+  się wskazana litera. Wiedzę o języku ów obiekt ma pobierać oczywiście z przeczytanych lek
+  tur. Lektury to pliki tekstowe. Kilka przykładowych jest danych wraz z zadaniem, można eksperymentować
+  oczywiście z dowolnymi własnymi. Wczytując plik warto posłużyć się Scannerem. Wszystkie znaki różne od liter
+  danego języka (np. polskiego) należy traktować jako separatory.
+Opis języka może być dokładniejszy (ale wtedy zajmuje więcej miejsca i dłużej trwa nauka) lub uproszczony (tańszy, szybszy ale mniej dokładny). Można np. pamiętać jakie litery pojawiły się po dowolnym fragmencie słowa, albo jakie pojawiły się tylko po fragmentach zaczynających się na początku słowa, albo wreszcie można pamiętać tylko jednoliterowe fragmenty słów. Są oczywiście jeszcze inne możliwości.
+Dodatkowo w naszym programie mają występować obiekty generujące (na postawie języka) słowa. Takie generatory mają stopniowo dodawać kolejne litery do słowa. Jako pierwszą literę mają wybrać jedną z tych, które z języku pojawiają się na pierwszej pozycji. Mając już wygenerowany fragment słowa mają (znów na podstawie języka) dobrać kolejną literę. To dobieranie może być różnie realizowane, np. można spytać obiekt reprezentujący język o to jakie i jak często pojawiają się znaki po ostatnio wygenerowanym znaku, albo można zbierać informacje o możliwych znakach występujących po wszystkich sufiksach dotąd wygenerowanego słowa. Wiedząc jakie litery jak często mogą się pojawić w języku z danym miejscu należy wylosować jedną z prawdopodobieństwem proporcjonalnym do częstości liter występujących w tym kontekście (po tym prefiksie) w języku.
+Sednem tego zadania jest użycie odpowiednich kolekcji z Javy (znamy ich odpowiedniki z Pythona, będą omawiane na najbliższym wykładzie). Poniżej podano w parach: interfejs odpowiadający danej kolekcji oraz zalecaną kolekcję:
+
+List<T>, ArrayList<T>,
+Map<K,V>, HashMap<K,V>.lub TreeMap<K,V>.
+Należy użyć w swojej implementacji obie podane powyżej kolekcje (czyli listę i słownik).
+Należy zaimplementować hierarchie Języków i Generatorów. W obu musi być co najmniej interfejs i co najmniej jedna implementacja. Dodanie klasy abstrakcyjnej mile widziane.
+Język powinien mieć operacje:
+
+Map<Character, Integer> częstości(String prefiks);  // Daje słownik częstości poszczególnych liter w słowach języka po podanym prefiksie,
+void uczSię(String słowo); // zapamiętuje dane o podanym słowie
+void uczSięZPliku(String nazwa); // zapamiętuje dane o wszystkich słowach ze wskazanego pliku, obśługuje wyjątek braku pliku (wypisuje komunikat i kończy działanie tej metody)
+String literyAlfabetu(); // daje napis ze wszystkimi literami danego języka, np "abcdefghijklmnoprqstuwxyząćęłńóśźż"
+String nazwa(); // daje nazwę opisująca rodzaj języka
+
+
+Generator powinien mieć operacje:
+String dajSłowo();  // daje wygenerowane słowo
+String nazwa(); //// daje nazwę opisująca rodzaj generatora
+
+
+
+Program główny
+Państwa program powinien mieć klasę Program w pakiecie program. Powinna zawierać co najmniej następujące metody
+
+public void test(String nazwaPliku, Język j){
+    System.out.print("==> Uczenie z pliku " + nazwaPliku + ", języka " + j.nazwa());
+    j.uczSięzPliku(nazwaPliku);
+
+    Generator g = new Generator2(j);
+    System.out.println(" i generatora = " + g.nazwa() +  ": ");
+    for(int i = 0; i<10; i++){
+        System.out.println(i + ": " + g.dajSłowo());
+    }
+}
+
+public static void main(String[] args) {
+    Program o = new Program();
+    o.test("pan-tadeusz.txt", new Język2());
+    o.test("lokomotywa.txt", new Język2());
+    o.test("oda-do-mlodosci.txt", new Język2());
+
+}
+
+Nazwy klas z językiem i generatorem mogą być inne, może być więcej generatorów i języków, można wczytywać inne dzieła, byleby ich pliki dostarczyć razem z rozwiązaniem.
+
+Przykład
+Przykładowy wynik działania programu:
+==> Uczenie z pliku pan-tadeusz.txt, języka Język2 i generatora = Generator2:
+0: szycyi
+1: ieszy
+2: pre
+3: szelie
+4: ł
+5: toć
+6: prznowi
+7: czkłosta
+8: poćkiał
+9: dhta
+==> Uczenie z pliku lokomotywa.txt, języka Język2 i generatora = Generator2:
+0: tuni
+1: sprądwę
+2: by
+3: żdą
+4: cąch
+5: gi
+6: okar
+7: torącole
+8: torzech
+9: le
+==> Uczenie z pliku oda-do-mlodosci.txt, języka Język2 i generatora = Generator2:
+0: koniekt
+1: sidzady
+2: m
+3: y
+4: ze
+5: wi
+6: am
+7: ze
+8: szczele
+9: h
+
+Rozwiązanie
+Jako rozwiązanie prosimy jak zwykle wysłać spakowane archiwum zip z Państwa pakietami z plikami .java (i ew. plikami z innymi działami literackimi).
+
+Uwagi
+
+To nie jest program z dziedziny Uczenie Maszynowe.
+Należy zadbać by słowa nie były zbyt długie (np. można przyjąć limit długości słowa 😎.
+Separatory w Scannerze można ustawić np. tak:
+sk = new Scanner(new File(nazwa)).useDelimiter("[^" + literyAlfabetu() + literyAlfabetu().toUpperCase() + "]+")
+
+
+Możliwe rozszerzenia
+
+Możliwe rozszerzenia (oczywiście nie są tu wymagane, pokazują tylko, jaki potencjał ma nasze zadanie):
+
+zaimplementowanie większej liczby klas języków i generatorów.
+Życzymy powodzenia!
+
+
+

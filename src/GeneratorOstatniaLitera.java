@@ -1,4 +1,4 @@
-public class GeneratorOstatniaLitera extends NazwanyObiekt implements IGenerator {
+public class GeneratorOstatniaLitera extends NazwanyObiekt implements Generator {
 
     public GeneratorOstatniaLitera(String nazwa) {
         super(nazwa);

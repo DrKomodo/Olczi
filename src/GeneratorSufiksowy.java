@@ -1,4 +1,4 @@
-public class GeneratorSufiksowy extends NazwanyObiekt implements IGenerator {
+public class GeneratorSufiksowy extends NazwanyObiekt implements Generator {
     public GeneratorSufiksowy(String nazwa) {
         super(nazwa);
     }
