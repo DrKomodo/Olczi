@@ -1,11 +1,13 @@
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.Scanner;
+
 
 public abstract class Jezyk extends NazwanyObiekt implements IJezyk {
     private Map<String, Map<Character, Integer>> dane;
     protected Set<Character> alfabet;
-
+    private static nazwa jezyk;
     public Jezyk(String nazwa) {
         super(nazwa);
     }
@@ -17,6 +19,8 @@ public abstract class Jezyk extends NazwanyObiekt implements IJezyk {
 
     @Override
     public void uczSięZPliku(String nazwa) {
+
+        sk = new Scanner(new File(nazwa)).useDelimiter("[^" + literyAlfabetu() + literyAlfabetu().toUpperCase() + "]+")
 
     }
 
