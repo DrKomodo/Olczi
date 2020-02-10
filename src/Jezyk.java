@@ -15,6 +15,9 @@ public abstract class Jezyk extends NazwanyObiekt implements IJezyk {
         return dane.getOrDefault(prefiks, new HashMap<>());
     }
 
+    @Override
+    public void
+
     protected void dodajInformacje(String prefiks, Character znak) {
         dane.putIfAbsent(prefiks, new HashMap<>());
         Map<Character, Integer> dane_prefiksu = dane.get(prefiks);

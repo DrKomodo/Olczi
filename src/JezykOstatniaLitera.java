@@ -18,8 +18,9 @@ public class JezykOstatniaLitera extends Jezyk {
 
     @Override
     public void uczSięZPliku(String nazwa) {
-
+        
     }
+
 
     @Override
     public String literyAlfabetu() {
