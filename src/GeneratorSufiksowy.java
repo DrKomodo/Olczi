@@ -2,6 +2,8 @@ import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class GeneratorSufiksowy extends Generator {
+
+    private static nazwa GeneratorSufiksowy;
     public GeneratorSufiksowy(String nazwa) {
         super(nazwa);
     }

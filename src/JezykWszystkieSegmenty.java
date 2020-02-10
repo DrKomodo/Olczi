@@ -1,6 +1,7 @@
 import java.util.Map;
 
 public class JezykWszystkieSegmenty extends Jezyk {
+
     public JezykWszystkieSegmenty(String nazwa) {
         super(nazwa);
     }

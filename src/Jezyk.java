@@ -4,7 +4,7 @@ import java.util.Set;
 import java.util.Scanner;
 
 
-public abstract class Jezyk extends NazwanyObiekt implements IJezyk {
+public abstract class Jezyk implements IJezyk {
     private Map<String, Map<Character, Integer>> dane;
     protected Set<Character> alfabet;
     private static nazwa jezyk;
@@ -19,9 +19,10 @@ public abstract class Jezyk extends NazwanyObiekt implements IJezyk {
 
     @Override
     public void uczSięZPliku(String nazwa) {
+        File plik = new File("nazwa_Pliku.txt");
 
-        sk = new Scanner(new File(nazwa)).useDelimiter("[^" + literyAlfabetu() + literyAlfabetu().toUpperCase() + "]+")
-
+        sk = new Scanner(new File("nazwa_Pliku.txt")).useDelimiter("[^" + literyAlfabetu() + literyAlfabetu().toUpperCase() + "]+")
+        
     }
 
     protected void dodajInformacje(String prefiks, Character znak) {
