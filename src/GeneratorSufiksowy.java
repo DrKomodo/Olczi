@@ -1,37 +1,27 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class GeneratorSufiksowy extends Generator {
 
-    private static nazwa GeneratorSufiksowy;
-    public GeneratorSufiksowy(String nazwa) {
-        super(nazwa);
+    public GeneratorSufiksowy(IJezyk j) {
+        super(j);
     }
 
     @Override
     protected Character dajKolejnyZnak(String slowo) {
-        int moc_zbioru = 0;
+        ArrayList<Character> wszystkie_znaki = new ArrayList<>();
         for (int poczatek = 0; poczatek <= slowo.length(); poczatek++) {
             String sufiks = slowo.substring(poczatek);
-            Map<Character, Integer> czestoci = jezyk.częstości(sufiks);
-            for (Map.Entry<Character, Integer> entry: czestoci.entrySet()) {
-                moc_zbioru += entry.getValue();
-            }
+            List<Character> znaki = jezyk.listaZnakow(sufiks);
+            wszystkie_znaki.addAll(znaki);
         }
-        int nr_litery = ThreadLocalRandom.current().nextInt(1, moc_zbioru + 1);
-        for (int poczatek = 0; poczatek <= slowo.length(); poczatek++) {
-            String sufiks = slowo.substring(poczatek);
-            Map<Character, Integer> czestoci = jezyk.częstości(sufiks);
-            for (Map.Entry<Character, Integer> entry: czestoci.entrySet()) {
-                if (nr_litery <= entry.getValue()) {
-                    return entry.getKey();
-                } else {
-                    nr_litery -= entry.getValue();
-                }
-            }
-        }
-        return null;
+        return losujZnak(wszystkie_znaki);
     }
 
-
+    @Override
+    public String nazwa() {
+        return "Generator Sufiksowy";
+    }
 }

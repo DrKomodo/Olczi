@@ -1,35 +1,48 @@
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-import java.util.Scanner;
-
+import java.util.*;
 
 public abstract class Jezyk implements IJezyk {
-    private Map<String, Map<Character, Integer>> dane;
+    public Jezyk() {
+        dane = new HashMap<>();
+        alfabet = new HashSet<>();
+    }
+
+    private Map<String, List<Character>> dane;
     protected Set<Character> alfabet;
-    private static nazwa jezyk;
-    public Jezyk(String nazwa) {
-        super(nazwa);
+
+    public List<Character> listaZnakow(String prefiks) {
+        return dane.getOrDefault(prefiks, new ArrayList<>());
     }
 
     @Override
     public Map<Character, Integer> częstości(String prefiks) {
-        return dane.getOrDefault(prefiks, new HashMap<>());
+        Map<Character, Integer> wynik = new HashMap<>();
+        List<Character> znaki = dane.getOrDefault(prefiks, new ArrayList<>());
+        for ( Character znak: znaki) {
+            int liczba_wystapien = wynik.getOrDefault(znak, 0);
+            wynik.put(znak, liczba_wystapien + 1);
+        }
+        return wynik;
     }
 
     @Override
     public void uczSięZPliku(String nazwa) {
         File plik = new File("nazwa_Pliku.txt");
+        Scanner odczyt = new Scanner(new File("nazwa_Pliku.txt"));
+        while(odczyt.hasNext().uczSię) {
+            String Slowo = odczyt.next().uczSię;
+            sk = new Scanner(new File("nazwa_Pliku.txt")).useDelimiter("[^" + literyAlfabetu() + literyAlfabetu().toUpperCase() + "]+")
+            System.out.println(odczyt.next());
+        }
 
-        sk = new Scanner(new File("nazwa_Pliku.txt")).useDelimiter("[^" + literyAlfabetu() + literyAlfabetu().toUpperCase() + "]+")
+
+
+    }
 
     }
 
     protected void dodajInformacje(String prefiks, Character znak) {
-        dane.putIfAbsent(prefiks, new HashMap<>());
-        Map<Character, Integer> dane_prefiksu = dane.get(prefiks);
-        int ile_razy = dane_prefiksu.getOrDefault(znak, 0);
-        dane_prefiksu.put(znak, ile_razy + 1);
+        dane.putIfAbsent(prefiks, new ArrayList<>());
+        dane.get(prefiks).add(znak);
     }
 
 
