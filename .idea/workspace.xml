@@ -3,17 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fbfe70b7-cf87-41a5-8b2e-c23c6fdaa89e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Generator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GeneratorOstatniaLitera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneratorOstatniaLitera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GeneratorSufiksowy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IJezyk.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Jezyk.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JezykOstatniaLitera.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JezykPrefiksy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JezykWszystkieSegmenty.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tresc.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Jezyk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jezyk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +28,15 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\aleks\Documents\GitHub\Olczi\src" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Java Scratch" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Program" />
+      <module name="Olczi" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -67,26 +67,26 @@
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581439392612">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581444289158">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1581439392612" />
-    <state x="490" y="231" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1581439566681">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1581444289158" />
+    <state x="490" y="231" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1581440713250">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="490" y="231" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.680@0.0.1280.680" timestamp="1581439566681" />
-    <state x="221" y="0" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor" timestamp="1581439564309">
+    <state x="490" y="231" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.680@0.0.1280.680" timestamp="1581440713250" />
+    <state x="221" y="0" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor" timestamp="1581440710561">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="221" y="0" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/0.0.1280.680@0.0.1280.680" timestamp="1581439564309" />
+    <state x="221" y="0" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/0.0.1280.680@0.0.1280.680" timestamp="1581440710561" />
     <state x="297" y="0" key="CommitChangelistDialog2" timestamp="1581439672573">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="297" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1581439672573" />
-    <state x="421" y="97" key="FileChooserDialogImpl" timestamp="1581333523541">
+    <state x="421" y="97" key="FileChooserDialogImpl" timestamp="1581443980438">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="97" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1581333523541" />
+    <state x="421" y="97" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1581443980438" />
     <state x="337" y="166" key="com.intellij.ide.util.TipDialog" timestamp="1581433942925">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

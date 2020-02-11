@@ -25,19 +25,28 @@ public abstract class Jezyk implements IJezyk {
     }
 
     @Override
-    public void uczSięZPliku(String nazwa) {
-        File plik = new File("nazwa_Pliku.txt");
-        Scanner odczyt = new Scanner(new File("nazwa_Pliku.txt"));
-        while(odczyt.hasNext().uczSię) {
-            String Slowo = odczyt.next().uczSię;
-            sk = new Scanner(new File("nazwa_Pliku.txt")).useDelimiter("[^" + literyAlfabetu() + literyAlfabetu().toUpperCase() + "]+")
-            System.out.println(odczyt.next());
+    public void uczSięZPliku(String nazwaPliku) {
+        Scanner sc = null;
+        try {
+            sk = new Scanner(new File("nazwa_Pliku.txt")).useDelimiter("[^" + literyAlfabetu() + literyAlfabetu().toUpperCase() + "]+");
+        } catch (FileNotFoundException ex) {
+            System.out.println("Nie udało się otworzyć pliku " + nazwaPliku);
+            exit(1);
         }
-
-
-
-    }
-
+        String Slowo;
+        while (sc.hasNext()) {
+            Slowo = sc.next().toLowerCase();
+            if (!pierwsze.contains(Slowo.charAt(0))) {
+                pierwsze.add(Slowo.charAt(0));
+            }
+            for (int i = 0; i < Slowo.length() - 1; i++) {
+                char litera, litera2;
+                litera = Slowo.charAt(i);
+                litera2 = Slowo.charAt(i + 1);
+                int ile = slownik.get(litera).get(litera2);
+                slownik.get(litera).replace(litera2, ile + 1);
+            }
+        }
     }
 
     protected void dodajInformacje(String prefiks, Character znak) {

@@ -1,9 +1,9 @@
 public class Program {
     public void test(String nazwaPliku, IJezyk j){
         System.out.print("==> Uczenie z pliku " + nazwaPliku + ", języka " + j.nazwa());
-        j.uczSię("mozzarella");
-        j.uczSię("eloeloelo320");
-        j.uczSię("bartek");
+        j.uczSię("pomidoro");
+        j.uczSię("elo12344");
+        j.uczSię("aleksandra");
 //        j.drukujDane();
 
 
