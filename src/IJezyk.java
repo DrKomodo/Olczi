@@ -1,6 +1,8 @@
+import java.util.List;
 import java.util.Map;
 
 public interface IJezyk {
+    public List<Character> listaZnakow(String prefiks);
     Map<Character, Integer> częstości(String prefiks);  // Daje słownik częstości poszczególnych liter w słowach języka po podanym prefiksie,
     void uczSię(String słowo); // zapamiętuje dane o podanym słowie
     void uczSięZPliku(String nazwa); // zapamiętuje dane o wszystkich słowach ze wskazanego pliku, obśługuje wyjątek braku pliku (wypisuje komunikat i kończy działanie tej metody)

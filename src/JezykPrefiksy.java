@@ -1,9 +1,6 @@
 import java.util.Map;
 
 public class JezykPrefiksy extends Jezyk {
-    public JezykPrefiksy(String nazwa) {
-        super(nazwa);
-    }
 
     @Override
     public void uczSię(String slowo) {
@@ -12,5 +9,10 @@ public class JezykPrefiksy extends Jezyk {
             alfabet.add(litery[koniec]);
             dodajInformacje(slowo.substring(0, koniec), litery[koniec]);
         }
+    }
+
+    @Override
+    public String nazwa() {
+        return "JezykPrefiksy";
     }
 }

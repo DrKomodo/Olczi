@@ -1,9 +1,6 @@
 import java.util.Map;
 
 public class JezykWszystkieSegmenty extends Jezyk {
-    public JezykWszystkieSegmenty(String nazwa) {
-        super(nazwa);
-    }
 
     @Override
     public void uczSię(String slowo) {
@@ -15,5 +12,10 @@ public class JezykWszystkieSegmenty extends Jezyk {
                 dodajInformacje(slowo.substring(poczatek, koniec), litery[koniec]);
             }
         }
+    }
+
+    @Override
+    public String nazwa() {
+        return "JezykWszystkieSegmenty";
     }
 }
